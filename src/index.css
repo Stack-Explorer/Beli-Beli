@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-roboto: "Roboto", "sans-serif";
+  --breakpoint-iphone : 465px;
+  --breakpoint-input  : 850px;
+}
+
+.hero-icon {
+  @apply flex justify-center bg-gray-200 items-center h-18 w-18 rounded-full cursor-pointer border-0
+}
+
+.hero-image {
+  @apply h-10 rounded-full w-10 object-contain
+}
+
+.time-button {
+  @apply h-10 w-10 ml-3 font-bold bg-red-500 flex justify-center items-center rounded-full text-white
+}
