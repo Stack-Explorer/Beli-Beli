@@ -16,73 +16,48 @@ const HeroSection = () => {
     return (
         <>
             {/*Desktop */}
-            <main className="max-lg:hidden lg:w-55/60 mt-4 m-10 h-[550px]">
-                <section className="w-full flex bg-gray-50  h-[375px]">
-                    <div className="left-section mx-4 my-3 flex-2/5">
-                        <h1 className="font-roboto mt-4 ml-2 text-gray-400 text-xl">#Big Fashion Sale</h1>
-                        <h1 className="font-roboto font-bold mt-1 ml-2 text-gray-900 text-[38px]">Limited Time Offer!</h1>
-                        <h1 className="font-roboto font-bold mt-1 ml-2 text-gray-900 text-[38px]">Up to <span className="italic"> 50% </span> OFF!  </h1>
-                        <h1 className="font-roboto mt-4 ml-2 text-gray-400 text-2xl">Redefine Your Everyday Style</h1>
+                <main className="max-lg:flex-col max-lg:items-center lg:w-full mt-4 ">
+                    <section className="w-full flex max-md:flex-col max-md:items-center bg-gray-50 ">
+                        <div className="left-section ml-14 my-3 flex-4/10">
+                            <h1 className="font-roboto mt-4 ml-2 max-md:text-xl max-md:font-medium text-gray-400 text-3xl">#Big Fashion Sale</h1>
+                            <h1 className="font-roboto font-bold mt-1 ml-2 max-md:text-[24px] max-iphone:text-[32px] text-gray-900 max-lg:text-[30px] text-[42px]">Limited Time Offer!</h1>
+                            <h1 className="font-roboto font-bold ml-2 max-md:text-[24px] max-iphone:text-[32px] mt-2 text-gray-900 max-lg:text-[30px] text-[42px]">Up to <span className="italic"> 50% </span> OFF!  </h1>
+                            <h1 className="font-roboto mt-4 ml-2 text-gray-400 max-md:text-[24px] max-iphone:text-[32px] text-2xl">Redefine Your Everyday Style</h1>
 
-                        <div className="flex ml-3 *:cursor-pointer mt-8 gap-3">
-                            {[0, 1, 2, 3].map((i) => (
-                                <a key={i} className={`mt-7 ${i === 1 ? `bg-gray-900` : `bg-gray-300`} bg-gray-300 rounded-full h-3 w-3`}></a>
-                            ))}
+                            <div className="flex max-md:hidden ml-3 *:cursor-pointer mt-8 gap-3">
+                                {[0, 1, 2, 3].map((i) => (
+                                    <a key={i} className={`mt-7 ${i === 1 ? `bg-gray-900` : `bg-gray-300`} bg-gray-300 rounded-full h-3 w-3`}></a>
+                                ))}
+                            </div>
+                        </div>
+
+                        <div className="right-section flex flex-5/10 max-sm:mt-1 mt-4 ml-4">
+
+                            <div className="md:ml-7 w-full max-md:relative flex md:items-start max-md:justify-center max-md:items-center max-md:mt-4 max-md:w-full">
+                                <Icon className="absolute md:hidden text-gray-800 top-[50%] left-[3%]" icon="material-symbols:chevron-left" width="30" height="30" />
+                                <img className="md:ml-5 right-10  w-full max-md:w-[90%] object-contain" src="/tshirt.jpg" alt="" />
+                                <Icon className="absolute md:hidden text-gray-800 top-[50%] right-[3%]" icon="material-symbols:chevron-right" width="30" height="30" />
+                            </div>
+                        </div>
+
+                        <br />
+
+                    </section>
+
+                    <div className="bottom-section lg:mt-10 w-full flex max-lg:flex-wrap max-lg:justify-center max-lg:items-center max-lg:gap-8 max-sm:mt-16 justify-around p-2 mx-3 max-md:mt-3">
+                        {images.map((image) => (
+                            <div key={image?.id} className="flex items-center flex-col">
+                                <a className="hero-icon max-md:h-15 max-md:w-15 md:h-20 md:w-20 "><img src={image?.image} className="hero-image" alt={image?.alt} /> </a>
+                                <p className="font-roboto mt-1.5 font-semibold">{image?.itemName}</p>
+                            </div>
+                        ))}
+
+                        <div className="flex items-center flex-col">
+                            <a className="hero-icon"><Icon icon="hugeicons:menu-square" width="24" height="24" /> </a>
+                            <p className="font-roboto mt-1.5  font-semibold">Category</p>
                         </div>
                     </div>
-
-                    <div className="right-section flex flex-3/5 mt-4 ml-4">
-                        <img className="ml-7 object-contain" src="/tshirt.jpg" alt="" />
-                    </div>
-
-                    <br />
-
-                </section>
-
-                <div className="bottom-section flex justify-around p-2 mx-3 mt-6">
-                    {images.map((image) => (
-                        <div key={image?.id} className="flex items-center flex-col">
-                            <a className="hero-icon"><img src={image?.image} className="hero-image" alt={image?.alt} /> </a>
-                            <p className="font-roboto mt-1.5 font-semibold">{image?.itemName}</p>
-                        </div>
-                    ))}
-
-                    <div className="flex items-center flex-col">
-                        <a className="hero-icon"><Icon icon="hugeicons:menu-square" width="24" height="24" /> </a>
-                        <p className="font-roboto mt-1.5  font-semibold">Category</p>
-                    </div>
-                </div>
-
-            </main >
-
-            {/*Less than desktop */}
-            <main className="lg:hidden flex flex-col w-full mt-5">
-
-
-                <article className="upper-section flex flex-col items-center mx-3 h-2/8 w-95/100">
-                    <h1 className=" text-gray-400 font-roboto text-2xl font-medium">#Big Fashion Sale</h1>
-                    <h1 className="text-gray-800 mt-2 font-roboto text-[42px] max-iphone:text-[32px] font-bold">Limited Time Offer!</h1>
-                    <h1 className="text-gray-800 font-roboto text-[42px]  max-iphone:text-[32px]  font-bold">Up to <span className="italic">50% </span> OFF!</h1>
-                    <h1 className=" text-gray-400 font-roboto text-2xl font-medium">Redifine Your Everyday Style</h1>
-                </article>
-
-                <div className="h-6/8 mt-7 mb-2 relative flex justify-center  mx-3 w-95/100">
-
-                    <Icon className="absolute text-gray-800 top-[50%] left-[5%]" icon="material-symbols:chevron-left" width="50" height="50" />
-                    <img className="object-contain mt-4 w-[65%]" src="tshirt.jpg" alt="T-Shirt" />
-                    <Icon className="absolute text-gray-800 top-[50%] right-[5%]" icon="material-symbols:chevron-right" width="50" height="50" />
-                </div>
-
-            </main>
-
-            <div className="w-full mt-4 lg:hidden flex flex-wrap justify-center gap-8 items-center p-3">
-                {images?.map((image) => (
-                    <div key={image?.id} className="flex flex-col justify-center items-center">
-                        <a className="bg-gray-200 max-md:h-15 max-md:w-15 md:h-20 md:w-20  rounded-full flex justify-center items-center"><img className="h-15 w-15 object-contain rounded-full " src={image?.image} alt={image?.alt} /> </a>
-                        <p className="font-semibold mt-2 font-roboto">{image?.itemName}</p>
-                    </div>
-                ))}
-        </div >
+                </main >
 
         </>
     )
