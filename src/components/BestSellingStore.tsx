@@ -10,12 +10,12 @@ export default function BestSellingStore() {
                     <h1 className="text-3xl font-roboto text-gray-900 font-semibold">Best Selling Store</h1>
                 </header>
 
-                <div className="w-full mt-5 flex justify-evenly items-center">
-                    <aside className="w-[20%] h-90 rounded-lg ">
-                        <img className="object-fill cursor-pointer h-full w-full" src="/footerimg.jpg" alt="" />
+                <div className="w-full mt-5 flex max-lg:flex-wrap justify-evenly items-center">
+                    <aside className="max-lg:w-full max-lg:flex max-lg:justify-center max-lg:items-center lg:w-[20%] h-90 rounded-lg ">
+                        <img className="object-fill max-lg:object-contain cursor-pointer h-full w-full" src="/footerimg.jpg" alt="" />
                     </aside>
 
-                    <div className="w-[70%] gap-4 grid grid-cols-2">
+                    <div className="max-lg:w-full max-lg:mt-5 w-[70%] gap-4 max-sm:grid-cols-1 max-sm:justify-items-center grid grid-cols-2">
                         {sellingCardData?.map((data) => (
                             <SellingCard iconName={data.iconName} title={data.title} quote={data.quote} products={data.products} />
                         ))}

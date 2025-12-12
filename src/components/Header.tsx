@@ -87,7 +87,7 @@ const Header = () => {
                         </div>
                     </div>
 
-                    <nav className="flex  mt-2 absolute max-input:right-4 right-5 ml-auto *:text-gray-400 gap-8 w-1/7 justify-center items-center">
+                    <nav className="flex max-iphone:gap-4  mt-2 absolute max-input:right-4 right-5 ml-auto *:text-gray-400 gap-8 w-1/7 justify-center items-center">
                         <Icon icon="ri:shopping-bag-fill" className="cursor-pointer" width="24" height="24" />
                         <Icon icon="mi:notification" className="cursor-pointer" width="24" height="24" />
                     </nav>

@@ -18,7 +18,7 @@ const HeroSection = () => {
             {/*Desktop */}
                 <main className="max-lg:flex-col max-lg:items-center lg:w-full mt-4 ">
                     <section className="w-full flex max-md:flex-col max-md:items-center bg-gray-50 ">
-                        <div className="left-section ml-14 my-3 flex-4/10">
+                        <div className="left-section max-md:ml-0 ml-14 my-3 flex-4/10">
                             <h1 className="font-roboto mt-4 ml-2 max-md:text-xl max-md:font-medium text-gray-400 text-3xl">#Big Fashion Sale</h1>
                             <h1 className="font-roboto font-bold mt-1 ml-2 max-md:text-[24px] max-iphone:text-[32px] text-gray-900 max-lg:text-[30px] text-[42px]">Limited Time Offer!</h1>
                             <h1 className="font-roboto font-bold ml-2 max-md:text-[24px] max-iphone:text-[32px] mt-2 text-gray-900 max-lg:text-[30px] text-[42px]">Up to <span className="italic"> 50% </span> OFF!  </h1>

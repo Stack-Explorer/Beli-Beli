@@ -15,7 +15,7 @@ interface SellingCardProps {
 
 export const SellingCard: React.FC<SellingCardProps> = ({ iconName,  title, quote, products }) => {
     return (
-        <div className="h-53 flex flex-col items-center border border-slate-200 ml-5 mt-5 rounded-xl w-auto">
+        <div className="h-53 flex flex-col items-center border border-slate-200 max-lg:ml-0 max-lg:mb-4 ml-5 mt-5 rounded-xl max-lg:w-85 w-auto">
 
             <section className="w-full mt-4 flex justify-start items-center">
 
